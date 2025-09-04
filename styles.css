@@ -161,7 +161,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: stretch;
-  border-bottom: 1px solid var(--dark-pink);
 }
 
 .menu-title {
