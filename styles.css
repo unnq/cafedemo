@@ -142,11 +142,9 @@
   font-weight: 400;           /* Imperial Script only has regular */
   letter-spacing: 0;          /* override .hero-title’s slight tracking */
   display: inline-block;      /* lets us nudge baseline cleanly */
-  line-height: .95;
   font-size: 1.15em;          /* small upscale so the script feels balanced */
   transform: translateY(0.06em); /* tiny nudge to align baselines */
-  /* Optional accent color: */
-  /* color: var(--dark-pink); */
+  color: var(--dark-pink); 
 }
 
 /* Tweak scale on larger screens if you like */
@@ -156,6 +154,7 @@
   
   .hero-subtitle{
     font-size: clamp(16px, 2.2vw, 20px);
+    font-family: 'Playfair Display';
     color: var(--muted);
     margin: 0;
     padding-bottom: 24px;
