@@ -119,6 +119,7 @@
 .hero{
   position: relative;
   display: flex;
+  height: 90vh;
   background:
     repeating-linear-gradient(
       90deg,
