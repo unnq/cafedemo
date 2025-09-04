@@ -118,6 +118,7 @@
   /* KEEP the stripes on .hero */
 .hero{
   position: relative;
+  display: flex;
   background:
     repeating-linear-gradient(
       90deg,
