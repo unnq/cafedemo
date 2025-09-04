@@ -115,27 +115,48 @@
       );
    } */
 
-   .hero{
-  --hero-focal: 50% 30%;
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(254,252,251,0.58) 0%,
-      rgba(248,232,232,0.50) 40%,
-      rgba(254,252,251,0.62) 85%
-    ),
-    url("assets/img/lacematcha.png") var(--hero-focal) / cover no-repeat;
+  .hero {
+    position: relative;
+   }
+
+   /* Absolute media layer sits above stripes, below text */
+   .hero-media{
+     position: absolute;
+     inset: 0;
+     display: grid;
+     place-items: center;
+     z-index: 0;                /* under .hero-content (which we'll make z:1) */
+     pointer-events: none;      /* never block clicks */
    }
   
   .hero-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 10vh;
-    height: 80vh;
+    position: relative;
+     z-index: 1;
   }
+
+  /* The lace-framed PNG */
+.hero-image{
+  /* scale and fit without cropping the lace */
+  width: min(90vw, 980px);
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+
+  /* Light separation so white lace doesn’t disappear on stripes */
+  filter: drop-shadow(0 10px 22px rgba(0,0,0,0.08))
+          drop-shadow(0 2px 0 rgba(255,255,255,0.35)); /* subtle edge “glow” */
+
+  /* optional micro-nudge if it needs to sit a bit higher/lower */
+  transform: translateY(0);
+}
+
+/* Quick responsive tweak if you want it smaller on mobile */
+@media (max-width: 900px){
+  .hero-image{
+    width: min(92vw, 720px);
+    transform: translateY(0); /* e.g., -6px if you want it a touch higher */
+  }
+}
   
   .hero-title{
     font-family: "Playfair Display", serif;
