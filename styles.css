@@ -176,7 +176,7 @@
     line-height: 1.1;
     margin: 0;
     letter-spacing: .2px;
-    color: var(--ink);
+    color: var(--soft-white);
   }
 
 /* Script styling for just the name */
@@ -187,7 +187,7 @@
   display: inline-block;      /* lets us nudge baseline cleanly */
   font-size: 1.15em;          /* small upscale so the script feels balanced */
   transform: translateY(0.06em); /* tiny nudge to align baselines */
-  color: var(--dark-pink); 
+  color: var(--soft-white); 
 }
 
 /* Tweak scale on larger screens if you like */
@@ -198,7 +198,7 @@
   .hero-subtitle{
     font-size: clamp(16px, 2.2vw, 20px);
     font-family: 'Playfair Display';
-    color: var(--muted);
+    color: var(--soft-white);
     margin: 0;
     padding-bottom: 24px;
   }
