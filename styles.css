@@ -124,7 +124,7 @@
       rgba(248,232,232,0.50) 40%,
       rgba(254,252,251,0.62) 85%
     ),
-    url("assets/img/icedmatcha.png") var(--hero-focal) / cover no-repeat;
+    url("assets/img/lacematcha.png") var(--hero-focal) / cover no-repeat;
    }
   
   .hero-content{
