@@ -151,12 +151,12 @@
   /* scale and fit without cropping the lace */
   width: min(90vw, 980px);
   max-width: 100%;
-  height: auto;
+  max-height: 70vh;
   object-fit: contain;
 
   /* Light separation so white lace doesn’t disappear on stripes */
-  filter: drop-shadow(0 10px 22px rgba(0,0,0,0.08))
-          drop-shadow(0 2px 0 rgba(255,255,255,0.35)); /* subtle edge “glow” */
+  filter: drop-shadow(0 10px 22px rgba(10, 10, 10, 0.28)) 
+     drop-shadow(0 2px 0 rgba(255, 255, 255, 0.55));
 
   /* optional micro-nudge if it needs to sit a bit higher/lower */
   transform: translateY(0);
