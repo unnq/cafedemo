@@ -346,6 +346,7 @@ html { scroll-behavior: smooth; }
   align-items: center;
   padding: 10px 16px;
   border-bottom: 1px solid var(--dark-pink);
+  border-top: 1px solid var(--dark-pink);
   backdrop-filter: blur(4px);
 }
 .menu-quickbar a {
