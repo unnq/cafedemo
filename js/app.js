@@ -122,30 +122,7 @@ const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   mq.addEventListener('change', (e) => applyAccordions(e.matches));
 })();
 
-// 4) Hero stripe drift (tiny parallax)
-(() => {
-  if (REDUCED) return;
-  const hero = document.querySelector('.hero');
-  if (!hero) return;
 
-  let rafId, start;
-  const speed = 0.02; // tweak
-
-  function frame(ts) {
-    if (!start) start = ts;
-    const t = (ts - start) * speed;
-    // shift background-position-x very slightly
-    hero.style.backgroundPosition = `${(t % 40)}px 0`;
-    rafId = requestAnimationFrame(frame);
-  }
-  rafId = requestAnimationFrame(frame);
-
-  // pause when tab hidden
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) cancelAnimationFrame(rafId);
-    else rafId = requestAnimationFrame(frame);
-  });
-})();
 
 // 5) Nav polish on scroll
 (() => {
