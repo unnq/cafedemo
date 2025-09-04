@@ -115,9 +115,18 @@
       );
    } */
 
-  .hero {
-    position: relative;
-   }
+  /* KEEP the stripes on .hero */
+.hero{
+  position: relative;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      var(--soft-white) 0px,
+      var(--soft-white) 20px,
+      var(--soft-pink) 20px,
+      var(--soft-pink) 40px
+    );
+}
 
    /* Absolute media layer sits above stripes, below text */
    .hero-media{
